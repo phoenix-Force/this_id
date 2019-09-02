@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="first">
+    <input type="text" id="second">
+</body>
+
+<script>
+    const msg = 'My name is !paradox';
+
+    let elem = document.querySelectorAll('input[type=text]');
+    console.log(elem);
+    for(const z of elem){
+        z.setAttribute('onclick','hey(this)');
+    }
+    console.log(elem);
+function hey(t){
+    console.log(t.id);
+    document.getElementById(t.id).setAttribute('value','');
+    document.getElementById(t.id).setAttribute('value',msg);
+}
+</script>
+</html>
